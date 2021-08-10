@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 10 15:26:35 2021
+
+@author: Kunal
+"""
+
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Billboard Hits</title>
+</head>
+<style>
+
+*{
+  max-height:500px}
+
+body {
+  background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_626660256_2000108620009280158_388846.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.login {
+  max-width: 500px;
+
+  padding-left:100px;
+  padding-top:0px;
+  padding-bottom:5px;
+  margin: auto;
+  
+
+}
+.image {
+  position:relative;
+  left:-85px; 
+  top:-15px;
+
+}
+button {
+  transition-duration: 0.4s;
+  font-size: 18px;
+  width:390px;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+input{
+  margin:5px;
+}
+
+</style>
+<body>
+ <div class="login">
+	<h1 style="position: relative;margin-top:0px; top: 0px;text-shadow:2px 2px 1px grey;">Billboard Top 100 hit Prediction</h1>
+	<div class='image'>
+    </div>
+    <h3 style="position:relative;top:-20px;text-shadow:2px 2px 1px white; margin-top:10px; margin-bottom:4px;">Enter audio features</h3>
+    <form action="{{ url_for('predict')}}"method="post" style="position:relative;top:-20px;">
+        <input type="text" name="Title" placeholder="Title"/>
+        <input type="text" name="Artist" placeholder="Arist" />
+    	<input type="text" name="Danceability" placeholder="Danceability" required="required" />
+        <input type="text" name="Energy" placeholder="Energy" required="required" />
+		<input type="text" name="Loudness" placeholder="Loudness" required="required" />
+        <input type="text" name="Speechiness" placeholder="Speechiness" required="required" />
+        <input type="text" name="Acousticness" placeholder="Acousticness" required="required" />
+		<input type="text" name="Liveness" placeholder="Liveness" required="required" />
+		<input type="text" name="Valence" placeholder="Valence" required="required" />
+        <input type="text" name="Tempo" placeholder="Tempo" required="required" />
+        <div class="dropdown" style="position:relative; top:5px; left:5px;">
+            <select class="item" name="Genre"  required="required" style="width:180px ">
+                <option>Genre</option>
+                <option value="alternative">alternative</option>
+                <option value="classical">classical</option>
+                <option value="country">country</option>
+                <option value="edm">edm</option>
+                <option value="jazz">jazz</option>
+                <option value="metal">metal</option>
+                <option value="pop">pop</option>
+                <option value="rap">rap</option>
+                <option value="reggae">reggae</option>
+                <option value="metal">metal</option>
+            </select> 
+        </div>    
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   </div>
+
+ 
