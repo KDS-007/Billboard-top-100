@@ -81,7 +81,8 @@ Problem: To predict if a song will be a billboard top100 hit
 # Deployment
 ## Deployed the model on heroku using flask framework
 
-### Screenshots
-![image](https://user-images.githubusercontent.com/65284408/129594547-4f3d5216-2c8f-4905-b448-5a6b8ee4b7a8.png)
-![image](https://user-images.githubusercontent.com/65284408/129594847-6f98b68b-6c5b-49df-bf7b-9f8cb0ba5d58.png)
-![image](https://user-images.githubusercontent.com/65284408/129594938-fe97cbdd-4a70-4912-9be1-11c387281a9e.png)
+### Heroku cloud link:
+
+https://billboardtop100.herokuapp.com/
+ 
+ 
